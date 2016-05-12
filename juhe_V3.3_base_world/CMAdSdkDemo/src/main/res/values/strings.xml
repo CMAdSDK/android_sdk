@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">天马SDK</string>
+
+    <string name="adsdk_debug_enabled">true</string>
+    <string name="adsdk_debug_toast_enabled">false</string>
+
+    <string name="title_activity_banner_demo">横幅广告</string>
+    <string name="title_activity_interstitial_ad">插屏广告</string>
+    <string name="title_activity_native_ad">原生广告</string>
+
+    <string name="showAdButtonLabel">显示</string>
+    <string name="loadNativeAdSmallButtonLabel">请求Native广告(小图样式)</string>
+    <string name="loadNativeAdBigButtonLabel">请求Native广告</string>
+    <string name="loadInstitialButtonLabel">请求插屏广告</string>
+    <string name="showInstitialButtonLabel">展示插屏广告</string>
+    <string name="prepareListViewButtonLabel">list view模式</string>
+
+</resources>

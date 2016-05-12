@@ -1,0 +1,128 @@
+{
+    "poslist": [
+        {
+            "adtype": 2,
+            "placeid": 1094100,
+            "info": [
+                {
+                    "name": "cm",
+                    "parameter": "1094100",
+                    "weight": 3
+                },
+                {
+                    "name": "fb",
+                    "parameter": "715063988584856_796118140479440",
+                    "weight": 2
+                },
+                {
+                    "name": "mp",
+                    "parameter": "11a17b188668469fb0412708c3d16813",
+                    "weight": 1
+                },
+                {
+                    "name": "yh",
+                    "parameter": "GJ2H2DDGRCCV5J9NM84T;SDK_BD_ResultPage_Native",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "adtype": 1,
+            "placeid": 1094101,
+            "info": [
+                {
+                    "name": "cm",
+                    "parameter": "1094101",
+                    "weight": 110
+                },
+                {
+                    "name": "fb",
+                    "parameter": "303774619832363_304494016427090,303774619832363_304494016427090_fail,303774619832363_304494016427090",
+                    "weight": 0
+                },
+                {
+                    "name": "fb_h",
+                    "parameter": "303774619832363_304494016427090",
+                    "weight": 15
+                },
+                {
+                    "name": "yh",
+                    "parameter": "GJ2H2DDGRCCV5J9NM84T;SDK_BD_HomePage_SmallNative",
+                    "weight": 4
+                },
+                {
+                    "name": "mp",
+                    "parameter": "11a17b188668469fb0412708c3d16813error",
+                    "weight": 6
+                },
+                {
+                    "name": "ab",
+                    "parameter": "ca-app-pub-7704128875295302/4147841271",
+                    "weight": 10
+                },
+                {
+                    "name": "mpbanner",
+                    "parameter": "252412d5e9364a05ab77d9396346d73d",
+                    "weight": 0
+                }
+            ]
+        },
+        {
+            "adtype": 3,
+            "placeid": 1094102,
+            "info": [
+                {
+                    "name": "cm",
+                    "parameter": "1094102",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "adtype": 1,
+            "placeid": 1094104,
+            "info": [
+                {
+                    "name": "cmb",
+                    "parameter": "1094104",
+                    "weight": 3
+                },
+                {
+                    "name": "fb",
+                    "parameter": "303774619832363_304494016427090",
+                    "weight": 0
+                },
+                {
+                    "name": "fb_h",
+                    "parameter": "303774619832363_304494016427090",
+                    "weight": 0
+                },
+                {
+                    "name": "yh",
+                    "parameter": "GJ2H2DDGRCCV5J9NM84T;SDK_BD_HomePage_SmallNative",
+                    "weight": 0
+                },
+                {
+                    "name": "mpb",
+                    "parameter": "252412d5e9364a05ab77d9396346d73d",
+                    "weight": 3
+                },
+                {
+                    "name": "ab",
+                    "parameter": "ca-app-pub-7704128875295302/4147841271",
+                    "weight": 0
+                }
+            ]
+        },{
+             "adtype": 1,
+             "placeid": 1094105,
+             "info": [
+                 {
+                     "name": "cmi",
+                     "parameter": "1094105",
+                     "weight": 1
+                 }
+             ]
+         }
+    ]
+}

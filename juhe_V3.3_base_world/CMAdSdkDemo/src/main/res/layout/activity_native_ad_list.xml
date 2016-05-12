@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_native_list"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="visible"
+        android:onClick="click"
+        android:background="@drawable/btn_blue_request"
+        android:text="请求NativeList广告" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="PosInfo"
+        android:id="@+id/ad_pos_infomation"
+        android:singleLine="false"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_lv"
+        android:padding="6dp"
+        android:divider="#cccccc"
+        android:dividerHeight="1dp"></ListView>
+</LinearLayout>

@@ -1,0 +1,33 @@
+ <!DOCTYPE html> <html> <head>  <!-- Adgroup is 3b62383e731e11e58271002590f31968 -->  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <style type='text/css'> .mp_center { position: fixed; top: 50%; left: 50%; margin-left: -150px !important; margin-top: -125px !important; } </style>  <script type="text/javascript"> function mopubFinishLoad(){ setTimeout( function() { window.location = 'mopub://finishLoad' }, 0 ); } </script> <script type="text/javascript"> if (trackImpressionHelper == null || typeof(trackImpressionHelper) != "function") { function trackImpressionHelper() { var urls = new Array(); var i = 0;  urls[i++]="http://ads.mopub.com/m/imp?appid=&cid=3b623b72731e11e58271002590f31968&city=Beijing&ckv=2&country_code=CN&cppck=79BD6&dev=MI%203W&id=65ce644af8524f909e7527d2949db24c&is_mraid=0&os=Android&osv=4.4.4&req=70618c5c80dd4c53bbb217273ebe3743&reqt=1451359440.0&rev=0.001150&udid=ifa%3A02eebdd2-dab9-4050-8e5a-c840b2543cf5&video_type=";  var hiddenSpan = document.createElement('span'); hiddenSpan.style.display = 'none'; var i = 0; for (var i=0;i<urls.length;i++) { var img = document.createElement('img'); img.src = urls[i]; hiddenSpan.appendChild(img); } var body = document.getElementsByTagName('body')[0]; body.appendChild(hiddenSpan); } } </script>  <script type="text/javascript"> function webviewDidClose(){ if (typeof webviewDidCloseHelper == 'function') { webviewDidCloseHelper(); } } function webviewDidAppear(){  if(typeof webviewDidAppearHelper == 'function') { webviewDidAppearHelper(); } } window.addEventListener("load", function() { var links = document.getElementsByTagName('a'); for(var i=0; i < links.length; i++) { links[i].setAttribute('target','_blank'); } }, false);  </script>  </head> <body style="margin:0;padding:0;">  <div class=""><!-- Synchronous tag structure for MoPub support; Ad Unit: 538119878 BD_ChargingScreen_300x250 300x250 -->
+<!-- Begin OpenX Tag -->
+<script type="text/javascript" src="http://ox-d.m-market.servedbyopenx.com/ma/1.0/jstag"></script>
+<script type="text/javascript">
+  var did = "02eebdd2-dab9-4050-8e5a-c840b2543cf5",
+    ad = {
+      "auid": "538119878",
+      "appName": "Battery Doctor (Battery Saver)",
+      "appBundle": "com.ijinshan.kbatterydoctor_en",
+      "appStoreURL": "https://play.google.com/store/apps/details?id=com.ijinshan.kbatterydoctor_en",
+      "coords": {
+        "latitude": "",
+        "longitude": ""
+      },
+      "openrtb": {
+        "app": {
+          "domain": "www.cmcm.com/en-us/battery-doctor/",
+          "privacypolicy": 1,
+          "paid": 0,
+          "keywords": "Battery, Power, Charger, Saver, Device, Optimizer, Longer, Drain, Tools",
+          "publisher": {
+            "name": "Cheetah Technology Corporation Limited",
+            "domain": "www.cmcm.com/"
+          },
+          "storeurl": "https://play.google.com/store/apps/details?id=com.ijinshan.kbatterydoctor_en"
+        }
+      },
+      "fallback": "<script type=\"text/javascript\" charset=\"utf-8\">loaded=true;window.location=\"mopub://failLoad\";<\/script>"
+    };
+  if(did){if(!!navigator.userAgent.match(/iPhone|iPad/)){ad.deviceIDs=[{type:'ia',id:did,tracking:'0'}];}else if(!!navigator.userAgent.match(/Android/)){ad.deviceIDs=[{type:((!!did.match(/-/))?'adid':'ai.sha1'),id:did,tracking:'0'}];}}
+  OX.requestAd(ad);
+</script>
+<!-- End OpenX Tag --></div> <script type="text/javascript"> if (typeof htmlWillCallFinishLoad == "undefined" || !htmlWillCallFinishLoad) { if(typeof mopubFinishLoad == 'function') { window.onload = mopubFinishLoad; } }  if(typeof trackImpressionHelper == 'function') { trackImpressionHelper(); }  </script>  </body> </html> 

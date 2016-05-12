@@ -1,0 +1,89 @@
+<!DOCTYPE html> <html> <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<script type="text/javascript"> 
+
+function orionFinishLoad(){ 
+	setTimeout( function() { 
+	window.location = 'orion://finishLoad' }, 0 );
+} 
+</script> 
+<script type="text/javascript"> 
+if (trackImpressionHelper == null || typeof(trackImpressionHelper) != "function") { 
+	function trackImpressionHelper() { 
+		var urls = new Array(); var i = 0;  
+
+        /* NOTE: impression-tracking  */ 
+        urls[i++]="http://{adkmob_host}/m/imp?appid=&cid=5c8a29652e0f4b259643d429f2427c75&city=Beijing&ckv=2&country_code=CN&cppck=CA56B&dev=MI%203W&id=65ce644af8524f909e7527d2949db24c&is_mraid=0&os=Android&osv=4.4.4&req=70618c5c80dd4c53bbb217273ebe3743&reqt=1451359449.0&rev=0.000350&udid=ifa%3A02eebdd2-dab9-4050-8e5a-c840b2543cf5&video_type=";  
+
+		var hiddenSpan = document.createElement('span'); hiddenSpan.style.display = 'none'; var i = 0; for (var i=0;i<urls.length;i++) { var img = document.createElement('img'); img.src = urls[i]; hiddenSpan.appendChild(img); } var body = document.getElementsByTagName('body')[0]; body.appendChild(hiddenSpan); 
+	} 
+}
+</script> 
+<script type="text/javascript"> 
+function webviewDidClose(){
+	if (typeof webviewDidCloseHelper == 'function') { 
+		webviewDidCloseHelper(); 
+	}
+} 
+function webviewDidAppear(){  
+	if(typeof webviewDidAppearHelper == 'function') { 
+		webviewDidAppearHelper(); 
+	} 
+} 
+window.addEventListener("load", function() { 
+	var links = document.getElementsByTagName('a'); for(var i=0; i < links.length; i++) { links[i].setAttribute('target','_blank'); } 
+}, false);  
+</script>  
+</head> 
+<body style="margin:0;padding:0;"> 
+ <div class="">
+ 
+
+ 
+ 
+
+
+ <!-- the html data start--> 
+	<div id="smaatoad" style="padding: 0px"></div>
+ 
+    <script type="text/javascript" src="http://soma-assets.smaato.net/js/smaatoAdTag.js"></script>
+    <script>
+    var trackImpressionHelperResume = trackImpressionHelper;
+    trackImpressionHelper = null;
+    orionFinishLoad = null;
+    function callBackForSmaato(status){
+    if(status == "SUCCESS"){
+    setTimeout(function() {
+    window.location = 'orion://finishLoad'
+    }, 0);
+    trackImpressionHelperResume();
+    } else if (status == "ERROR"){
+    loaded=true; window.location="orion://failLoad";
+    }
+    };
+    SomaJS.loadAd({
+    adDivId : "smaatoad"
+    ,publisherId: 1100003856
+    ,adSpaceId: 130070070        ,format: "all"
+    ,dimension: "medrect"
+    ,latitude: ""
+    ,longitude: ""
+    ,mraidver: 0
+    ,did: "02eebdd2-dab9-4050-8e5a-c840b2543cf5"
+    ,autoReload: 60
+    }, callBackForSmaato);
+    </script>
+<!-- the html data end-->
+
+
+
+	</div> 
+	
+	<script type="text/javascript"> 
+	if (typeof htmlWillCallFinishLoad == "undefined" || !htmlWillCallFinishLoad) { 
+		if(typeof orionFinishLoad == 'function') { window.onload = orionFinishLoad; } 
+	}  
+	if(typeof trackImpressionHelper == 'function') { trackImpressionHelper(); }  
+	</script> 
+	</body>
+	</html>

@@ -1,0 +1,106 @@
+ <!DOCTYPE html> <html> <head>  <!-- Adgroup is 800306e32b0d4d97abb54eee99355465 -->  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  <style type='text/css'> .mp_center { position: fixed; top: 50%; left: 50%; margin-left: -150px !important; margin-top: -125px !important; } </style>  <script type="text/javascript"> function mopubFinishLoad(){ setTimeout( function() { window.location = 'orion://finishLoad' }, 0 ); } </script> <script type="text/javascript"> if (trackImpressionHelper == null || typeof(trackImpressionHelper) != "function") { function trackImpressionHelper() { var urls = new Array(); var i = 0;  urls[i++]="http://ads.mopub.com/m/imp?appid=&cid=83b3e8484417461ca2e5bcdf67e9bcbb&city=Beijing&ckv=2&country_code=CN&cppck=959D5&dev=Nexus%205&id=252412d5e9364a05ab77d9396346d73d&is_mraid=0&os=Android&osv=5.1.0&req=721597ca384848f6bf4fb1c96df7bb36&reqt=1450774575.0&rev=0.000050&udid=ifa%3Acadb196f-0dad-4592-8657-2078342c36b2&video_type=";  var hiddenSpan = document.createElement('span'); hiddenSpan.style.display = 'none'; var i = 0; for (var i=0;i<urls.length;i++) { var img = document.createElement('img'); img.src = urls[i]; hiddenSpan.appendChild(img); } var body = document.getElementsByTagName('body')[0]; body.appendChild(hiddenSpan); } } </script>  <script type="text/javascript"> function webviewDidClose(){ if (typeof webviewDidCloseHelper == 'function') { webviewDidCloseHelper(); } } function webviewDidAppear(){  if(typeof webviewDidAppearHelper == 'function') { webviewDidAppearHelper(); } } window.addEventListener("load", function() { var links = document.getElementsByTagName('a'); for(var i=0; i < links.length; i++) { links[i].setAttribute('target','_blank'); } }, false);  </script>  </head> <body style="margin:0;padding:0;">  <div class=""><!DOCTYPE html>
+<html>
+  <head></head>
+  <style>
+    @-webkit-keyframes animatedBackground {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+    }
+
+    @-webkit-keyframes fadeIn {
+      from { opacity: 0; max-width: 50%; }
+      to { opacity: 1; max-width: 100%; }
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
+    footer,
+    header,
+    section {
+      display: block;
+    }
+
+    #workspace {
+      background-image: url(http://d30x8mtr3hjnzo.cloudfront.net/creatives/001945fb22324772888eb92f561738b1);
+      background-position: 0 0;
+      width: 300px;
+      height: 250px;
+
+      -webkit-animation: animatedBackground 20s linear infinite;
+
+      position: relative;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      text-align: left;
+    }
+
+    header img {
+      padding: 10px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background-color: #20ace5;
+      line-height: 50px;
+      height: 50px;
+
+      color: white;
+      font-weight: 100;
+      font-size: 26px;
+      font-style: italic;
+
+    }
+
+    .centered {
+      max-width: 100%;
+      height: auto;
+      overflow: auto;
+      margin: auto;
+      position: absolute;
+      top: 0; left: 0; bottom: 0; right: 0;
+    }
+
+    .offset-50 {
+      top: -50px;
+    }
+
+    #nice {
+      -webkit-animation: fadein 1s ease-in;
+    }
+
+  </style>
+  <body> <a href="https://play.google.com/store/apps/details?id=com.cleanmaster.mguard">
+  <div id="workspace">
+    <header>
+    <img id="mopub" src="http://d30x8mtr3hjnzo.cloudfront.net/creatives/7605f271b4cd4c9795ab0cb6fb4b7bd9">
+    </header>
+    <img id="star-circle" class="centered offset-50" src="http://d30x8mtr3hjnzo.cloudfront.net/creatives/11e8d31aa83744f18308c07dd84d359d" />
+    <img id="nice" class="centered offset-50" src="http://d30x8mtr3hjnzo.cloudfront.net/creatives/dd3916279099406293628ea9312cdaff"/>
+    <footer>
+      Tap to test this ad.
+    </footer>
+  </div>
+  </a></body>
+</html>
+</div> <script type="text/javascript"> if (typeof htmlWillCallFinishLoad == "undefined" || !htmlWillCallFinishLoad) { if(typeof mopubFinishLoad == 'function') { window.onload = mopubFinishLoad; } }  if(typeof trackImpressionHelper == 'function') { trackImpressionHelper(); }  </script>  </body> </html> 
