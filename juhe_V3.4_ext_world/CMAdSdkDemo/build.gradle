@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 22
+
+        buildConfigField "boolean", "IS_CN_VERSION", "false"
+    }
+
+    productFlavors {
+        world {
+            applicationId "com.cmcm.ads"
+            buildConfigField "boolean", "IS_CN_VERSION", "true"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-project.txt'
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    compile(name: 'cmadsdk_world_release_V3.4', ext: 'aar')
+    compile 'com.android.support:support-v4:22.2.0'
+    compile files('libs/volley.jar')
+
+    compile(name: 'play-services-ads-7.8.0', ext: 'aar')
+    compile(name: 'play-services-analytics-7.8.0', ext: 'aar')
+    compile(name: 'play-services-base-7.8.0', ext: 'aar')
+}
+
