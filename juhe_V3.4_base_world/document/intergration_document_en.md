@@ -4,6 +4,9 @@
 Oversea Version 3.4 includes Native, Native Banner and Native Interstitial Ads formats.
 ##2、Prepare work
 ###2.1、Add aar
+before add aar file must find the .aar file in libs folder
+![image load failed ](http://i.imgur.com/A3d8tnv.png)
+
 Copy aar file to libs of project，add compile(name: 'cmadsdk_ext_world_V3.4.0', ext: 'aar') in dependent tag of Gradle script.
 
 ![image load failed](http://i.imgur.com/va9cHVe.png)
@@ -17,31 +20,37 @@ Add permission：
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+![image load failed](http://i.imgur.com/1DS3cRI.png)
 	
 ###2.3、Init SDK
-	Suggesting in OnCreate() method of Application initialize sdk，for example：   
+Suggesting in OnCreate() method of Application initialize sdk，for example：   
+	
 	@Override
 	public void onCreate() {
     	super.onCreate();   
     	//The first parameter：Context
-    	//The second parameter: Mid(the identifier of the app，the first four numbers of posid)       		//The third parameter：product channel id（can be null）
+    	//The second parameter: Mid(the identifier of the app，the first four numbers of posid)       		
+        //The third parameter：product channel id（can be null）
     	CMAdManager.applicationInit(this, "Your AppId", "You channel ID");
 	}		
 
+![image load failed](http://i.imgur.com/apDtCYf.png)
 ##3. Code Integration
 ###3.1、 Native	
 ####3.1.1、loadAd and showAd
 	 // The first parameter：Context
 	 // The second parameter：Posid
- 	 NativeAdManager nativeAdManager = new NativeAdManager(this, "Your posid");
+ 	if(nativeAdManager == null) {
+            nativeAdManager = new NativeAdManager(this, "your posId");
+        }
      nativeAdManager.setNativeAdListener(new INativeAdLoader.INativeAdLoaderListener() {
         	@Override
          	public void adLoaded() {
 				INativeAd ad = nativeAdManager.getAd();
-                View mAdView = View.inflate(MainActivity.this,
-                        "Your Ad layout", null);
+                View mAdView = View.inflate(MainActivity.this,"Your Ad layout", null);
                 //get ad data by InatveAd object and rander ad view
-                //register view for 
+                //register view
                 mNativeAd.registerViewForInteraction(mAdView);
 				//note：requested event
 				//unregisterView  please call this method when ad display is not needed, quitting the interface view, etc.
@@ -150,13 +159,13 @@ Add permission：
 				.setInterstitialCallBack(new InterstitialAdCallBack() {
 					@Override
 					public void onAdLoadFailed(int errorCode) {
-						Toast.makeText(InterstitalAdSampleActivity.this, "interstitialAd load Failed errorcode:"+errorCode,Toast.LENGTH_LONG).show();
+						
 					}
 
 					@Override
 					public void onAdLoaded() {
 						interstitialAdManager.showAd();
-						Toast.makeText(InterstitalAdSampleActivity.this, "interstitialAd load success",Toast.LENGTH_LONG).show();
+						
 					}
 
 					@Override
@@ -202,14 +211,21 @@ Add permission：
 </tbody>
 </table>
 Note: There is no picture loading function of the SDK, need to add the picture loading function from outside. Please set the load function before sending request of interstitial Ads. Please add the following code at the init:
-CMAdManagerFactory.setImageDownloaderDelegate(new MyImageLoadListener()); 
-see example at Demo MyAppLication.
+ 
+ `CMAdManagerFactory.setImageDownloaderDelegate(new MyImageLoadListener()); `
+
+ see example at Demo MyAppLication.
+
+![image load failed](http://i.imgur.com/qDxyypA.png)
 
 ##4、Proguard script
 
 Add the following script in your proguard script:
-
+	
 	-keep class com.cmcm.adsdk.** { *;}
+
+  ![image load failed](http://i.imgur.com/825Fo9v.png)
+
 ##5、Error Code
 
 <table>
