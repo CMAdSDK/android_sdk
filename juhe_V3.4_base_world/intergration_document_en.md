@@ -5,6 +5,8 @@ Oversea Version 3.4 includes Native, Native Banner and Native Interstitial Ads f
 ##2、Prepare work
 ###2.1、Add aar
 Copy aar file to libs of project，add compile(name: 'cmadsdk_ext_world_V3.4.0', ext: 'aar') in dependent tag of Gradle script.
+
+![image load failed](https://github.com/CMAdSDK/android_sdk/blob/master/juhe_V3.4_base_world/image/importAAR.png)
 		
 ###2.2、Modify AndroidManifest.xml
 
