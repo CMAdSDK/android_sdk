@@ -12,10 +12,10 @@ before add aar file must find the .aar file in libs folder
     				}
 		}
 
-Copy aar file to libs of project，add compile(name: 'cmadsdk_world_release_V3.4', ext: 'aar') in dependent tag of Gradle script.
+Copy aar file to libs of project，add compile(name: 'cmadsdk_world_base_V3.4.1', ext: 'aar') in dependent tag of Gradle script.
 
     dependencies {
-		compile(name: 'cmadsdk_world_release_V3.4', ext: 'aar')
+		compile(name: 'cmadsdk_world_base_V3.4.1', ext: 'aar')
 		
 	}
 
