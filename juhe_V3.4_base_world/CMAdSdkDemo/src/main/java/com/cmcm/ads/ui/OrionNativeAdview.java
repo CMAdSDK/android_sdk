@@ -3,7 +3,6 @@ package com.cmcm.ads.ui;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -14,6 +13,19 @@ import com.cmcm.ads.R;
 import com.cmcm.ads.utils.VolleyUtil;
 import com.cmcm.baseapi.ads.INativeAd;
 
+/**
+ * this Ad view  custom by publisher
+ * step1:
+ * View mAdView = View.inflate(Context,"Your Ad layout", null);
+ *
+ * step2:
+ * Bind the ad with the mAdView
+ * ad.registerViewForInteraction(mAdView);
+ * notice: this step is necessary，if don't ,the event like click of the ad will not effective.
+ *
+ * unregisterView should be used when the ad no need to show.
+ * ad.unregisterView();
+ */
 public class OrionNativeAdview extends FrameLayout {
 
     final protected Context mContext;
@@ -49,6 +61,7 @@ public class OrionNativeAdview extends FrameLayout {
     }
 
     public void initAdView(INativeAd ad) {
+            //step1: Your Ad layout
             mNativeAdView = View.inflate(mContext, R.layout.native_ad_layout, this);
             String iconUrl = ad.getAdIconUrl();
             ImageView iconImageView = (ImageView) mNativeAdView
@@ -64,6 +77,7 @@ public class OrionNativeAdview extends FrameLayout {
                 imageViewMain.setVisibility(View.VISIBLE);
                 VolleyUtil.loadImage(imageViewMain, mainImageUrl);
             }
+            //fill ad data
             TextView titleTextView = (TextView) mNativeAdView.findViewById(R.id.big_main_title);
             TextView subtitleTextView = (TextView) mNativeAdView.findViewById(R.id.big_sub_title);
             Button bigButton = (Button) mNativeAdView.findViewById(R.id.big_btn_install);
@@ -76,8 +90,10 @@ public class OrionNativeAdview extends FrameLayout {
         if (mNativeAd != null) {
             mNativeAd.unregisterView();
         }
+
         mNativeAd = ad;
-        //register view for ad
+        // step2: register view for ad
         mNativeAd.registerViewForInteraction(mNativeAdView);
+
     }
 }

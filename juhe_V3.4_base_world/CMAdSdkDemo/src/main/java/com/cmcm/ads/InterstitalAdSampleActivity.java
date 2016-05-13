@@ -8,7 +8,13 @@ import android.widget.Toast;
 
 import com.cmcm.adsdk.interstitial.InterstitialAdCallBack;
 import com.cmcm.adsdk.interstitial.InterstitialAdManager;
-
+/**
+ * InterstitalAd
+ *
+ * request interstitalAd steps(see demo):
+ * step1 , step2 , step3 , step4
+ *
+ */
 public class InterstitalAdSampleActivity extends Activity {
 	private InterstitialAdManager interstitialAdManager;
 	private Button showBtn;
@@ -28,9 +34,11 @@ public class InterstitalAdSampleActivity extends Activity {
 				requestInstitialAd();
 			}
 		});
-		//you can showAd when ad loaded
+
 		showBtn.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				//step4 : if load interstitialAd success ,
+				//        you can show Ad by InterstitialAdManager#showAd()
 				if(interstitialAdManager != null && isAdReady) {
 					interstitialAdManager.showAd();
 				}
@@ -41,8 +49,12 @@ public class InterstitalAdSampleActivity extends Activity {
 
 	private void requestInstitialAd() {
 		if(interstitialAdManager == null) {
+			//step1 : create interstitialAdManager
+			//The first parameter：Context
+			//The second parameter: posid
 			interstitialAdManager = new InterstitialAdManager(this, posid);
 		}
+		//step2 : set callBack listener if you need .
 		interstitialAdManager
 				.setInterstitialCallBack(new InterstitialAdCallBack() {
 					@Override
@@ -63,15 +75,16 @@ public class InterstitalAdSampleActivity extends Activity {
 
 					@Override
 					public void onAdDisplayed() {
-
+						//ad display
 					}
 
 					@Override
 					public void onAdDismissed() {
-
+						//click close button that ad destory
 					}
 				});
 		isAdReady = false;
+		//step3 : start load interstitialAd by InterstitialAdManager#loadAd()
 		interstitialAdManager.loadAd();
 	}
 }
