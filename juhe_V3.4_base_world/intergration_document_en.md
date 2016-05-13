@@ -5,7 +5,12 @@ Oversea Version 3.4 includes Native, Native Banner and Native Interstitial Ads f
 ##2、Prepare work
 ###2.1、Add aar
 before add aar file must find the .aar file in libs folder
-![image load failed ](http://i.imgur.com/A3d8tnv.png)
+
+       repositories {
+    		flatDir {
+        		dirs 'libs'
+    				}
+		}
 
 Copy aar file to libs of project，add compile(name: 'cmadsdk_world_release_V3.4', ext: 'aar') in dependent tag of Gradle script.
 
@@ -14,7 +19,6 @@ Copy aar file to libs of project，add compile(name: 'cmadsdk_world_release_V3.4
 		
 	}
 
-![image load failed](http://i.imgur.com/va9cHVe.png)
 		
 ###2.2、Modify AndroidManifest.xml
 
@@ -26,7 +30,6 @@ Add permission：
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-![image load failed](http://i.imgur.com/1DS3cRI.png)
 	
 ###2.3、Init SDK
 Suggesting in OnCreate() method of Application initialize sdk，for example：   
@@ -40,7 +43,6 @@ Suggesting in OnCreate() method of Application initialize sdk，for example：
     	CMAdManager.applicationInit(this, "Your AppId", "You channel ID");
 	}		
 
-![image load failed](http://i.imgur.com/apDtCYf.png)
 ##3. Code Integration
 ###3.1、 Native	
 ####3.1.1、loadAd and showAd
@@ -221,7 +223,6 @@ Note: There is no picture loading function of the SDK, need to add the picture l
 
  see example at Demo MyAppLication.
 
-![image load failed](http://i.imgur.com/qDxyypA.png)
 
 ##4、Proguard script
 
@@ -229,7 +230,6 @@ Add the following script in your proguard script:
 	
 	-keep class com.cmcm.adsdk.** { *;}
 
-  ![image load failed](http://i.imgur.com/825Fo9v.png)
 
 ##5、Error Code
 
