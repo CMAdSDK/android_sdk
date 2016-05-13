@@ -22,7 +22,8 @@ Add permission：
 	public void onCreate() {
     	super.onCreate();   
     	//The first parameter：Context
-    	//The second parameter: Mid(the identifier of the app，the first four numbers of posid)       		//The third parameter：product channel id（can be null）
+    	//The second parameter: Mid(the identifier of the app，the first four numbers of posid)       		
+    	//The third parameter：product channel id（can be null）
     	CMAdManager.applicationInit(this, "Your AppId", "You channel ID");
 	}		
 
@@ -37,21 +38,23 @@ load Ad for example :
  	 nativeAdManager.setNativeAdListener(new INativeAdLoaderListener() {
 		       @Override
 		       public void adLoaded() {
-				     //get ad
+				 //get ad
 		       		 INativeAd ad = nativeAdManagerEx.getAd();
 		       		 if (ad == null) {
                    			 return;
                       }
 				    
 				     //Initialize the ad view,and use the elemnets of the 
-				     //INativeAd object to fill the mAdView					//the layout should be prepared by yourself
+				     //INativeAd object to fill the mAdView
+					//the layout should be prepared by yourself
 		           	 View mAdView = View.inflate(MainActivity.this,"Your Ad layout", null);
 						
 		           
 		           
 		            //Bind the ad with the mAdView
 		            //notice: this step is necessary，if don't ,the event like 
-		            //click of the ad will not effective.		            //unregisterView should be used when the ad no need to show.
+		            //click of the ad will not effective.
+		            //unregisterView should be used when the ad no need to show.
 		             ad.registerViewForInteraction(mAdView);
 				
 		             if (mAdView != null) {
