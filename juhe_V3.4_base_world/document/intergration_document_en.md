@@ -7,7 +7,12 @@ Oversea Version 3.4 includes Native, Native Banner and Native Interstitial Ads f
 before add aar file must find the .aar file in libs folder
 ![image load failed ](http://i.imgur.com/A3d8tnv.png)
 
-Copy aar file to libs of project，add compile(name: 'cmadsdk_ext_world_V3.4.0', ext: 'aar') in dependent tag of Gradle script.
+Copy aar file to libs of project，add compile(name: 'cmadsdk_world_release_V3.4', ext: 'aar') in dependent tag of Gradle script.
+
+    dependencies {
+		compile(name: 'cmadsdk_world_release_V3.4', ext: 'aar')
+		
+	}
 
 ![image load failed](http://i.imgur.com/va9cHVe.png)
 		
