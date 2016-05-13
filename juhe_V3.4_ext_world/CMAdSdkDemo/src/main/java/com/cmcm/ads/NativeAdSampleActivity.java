@@ -13,11 +13,14 @@ import com.cmcm.adsdk.nativead.NativeAdManager;
 import com.cmcm.baseapi.ads.INativeAd;
 import com.cmcm.baseapi.ads.INativeAdLoaderListener;
 
-
+/**
+ * Native Ad (the Ad type include fb , cm , admob , yahoo , mopub )
+ * request Native Ad steps : step1 , step2 , step3
+ */
 public class NativeAdSampleActivity extends Activity implements OnClickListener {
 
     private NativeAdManager nativeAdManager;
-    private FrameLayout nativeAdContainer;
+    private FrameLayout nativeAdContainer;//View Container
     private Button loadAdButton;
 	private String mAdPosid =  "1094101";
     private OrionNativeAdview mAdView = null;
@@ -34,10 +37,18 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
     }
 
     private void initNativeAd() {
+        //setp1 : create nativeAdManager
+        //The first parameter：Context
+        //The second parameter: posid
         nativeAdManager = new NativeAdManager(this, mAdPosid);
+
+        //setp2 : set callback listener(INativeAdLoaderListener)
         nativeAdManager.setNativeAdListener(new INativeAdLoaderListener() {
             @Override
             public void adLoaded() {
+                //ad load  success ,you can do other something here;
+
+
                 Toast.makeText(NativeAdSampleActivity.this, "ad load  success", Toast.LENGTH_LONG).show();
             }
 
@@ -57,6 +68,7 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
 	public void onClick(View v) {
 		switch (v.getId()) {
             case R.id.btn_req:
+                //step3 : start load nativeAd
                 nativeAdManager.loadAd();
                 break;
             case R.id.btn_show:
@@ -67,8 +79,12 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
         }
     }
 
+    /**
+     * if load nativeAd success,you can get and show nativeAd;
+     */
     private void showAd(){
         if(nativeAdManager != null){
+
             INativeAd ad = nativeAdManager.getAd();
             if (ad == null) {
                 Toast.makeText(NativeAdSampleActivity.this,
@@ -79,7 +95,10 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
                 // remove old ad view
                 nativeAdContainer.removeView(mAdView);
             }
+            //the mAdView is custom by publisher
             mAdView = OrionNativeAdview.createAdView(getApplicationContext(), ad);
+
+            //add the mAdView into the layout of view container.(the container should be prepared by youself)
             nativeAdContainer.addView(mAdView);
 
         }

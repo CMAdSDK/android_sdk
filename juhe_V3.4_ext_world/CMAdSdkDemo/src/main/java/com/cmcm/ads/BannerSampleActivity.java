@@ -11,6 +11,14 @@ import com.cmcm.adsdk.banner.CMBannerAdListener;
 import com.cmcm.adsdk.banner.CMBannerAdSize;
 import com.cmcm.adsdk.banner.CMNativeBannerView;
 
+/**
+ * Banner Ad
+ * The current SDK version only support 320*50 or 300 * 250
+ * request banner ad steps(see demo):
+ * step1 ,step2 ,step3 ,step4 ,step5 ,step6
+ *
+ *  notice: if the activity or fragment destory ,strongly suggest destory bannerView
+ */
 public class BannerSampleActivity extends Activity{
     private FrameLayout mLinearLayout;
     private Button mBtn_load;
@@ -44,14 +52,21 @@ public class BannerSampleActivity extends Activity{
 
     private void showBanner(CMBannerAdSize cmBannerAdSize){
         if (cmNativeBannerView == null) {
+             //step1 : create CMNativeBannerView ,
+             // the parameter : Context
             cmNativeBannerView = new CMNativeBannerView(this);
         }
+        //step2 : set size of bannerAd
+        //the parameter : bannerSize,only support CMBannerAdSize.BANNER_300_250 or CMBannerAdSize.BANNER_320_50
         cmNativeBannerView.setAdSize(cmBannerAdSize);
+        //step3 : set Posid
         cmNativeBannerView.setPosid(mAdPosid);
+        //step4 : set callBack listener
         cmNativeBannerView.setAdListener(new CMBannerAdListener() {
             @Override
             public void onAdLoaded(CMAdView ad) {
                 mLinearLayout.removeAllViews();
+                // step6: load success ,get bannerView and add to your View container.
                 mLinearLayout.addView(ad);
             }
 
@@ -65,10 +80,13 @@ public class BannerSampleActivity extends Activity{
 
             }
         });
+        // step5: start load bannerAd
         cmNativeBannerView.loadAd();
     }
 
-
+    /**
+     * if the activity or fragment destory ,strongly suggest destory bannerView
+     */
     @Override
     protected void onDestroy() {
         super.onDestroy();

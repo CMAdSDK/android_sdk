@@ -11,6 +11,9 @@ import com.cmcm.adsdk.CMAdManager;
 
 import java.io.File;
 
+/**
+ * imageLoad util
+ */
 public class VolleyUtil {
 
     public static ImageLoader sImageLoader = new ImageLoader(Volley.newRequestQueue(
@@ -18,9 +21,9 @@ public class VolleyUtil {
 
     public static void loadImage(final ImageView view, String url) {
         /**
-         +         * patch: http://trace-abord.cm.ijinshan.com/index/dump?version=4250026&date=20150628&thever=21&dumpkey=2745934861&field=%E6%97%A0&field_content=
-         +         * 由于之前版本出现多进程访问volley，导致部分文件被写坏而发生崩溃，现在先清理一次缓存
-         +         *
+         * patch: http://trace-abord.cm.ijinshan.com/index/dump?version=4250026&date=20150628&thever=21&dumpkey=2745934861&field=%E6%97%A0&field_content=
+         * Due to the previous version there multi-process access volley,
+         * resulting in part of the file is written bad and collapse, now cleared a cache first .
          * */
         doCleanAllCache();
 
@@ -66,14 +69,10 @@ public class VolleyUtil {
             return;
         }
 
-        /**
-         +         * patch: http://trace-abord.cm.ijinshan.com/index/dump?version=4250026&date=20150628&thever=21&dumpkey=2745934861&field=%E6%97%A0&field_content=
-         +         * 由于之前版本出现多进程访问volley，导致部分文件被写坏而发生崩溃，现在先清理一次缓存
-         +         *
-         * */
+        //now cleared a cache first
         doCleanAllCache();
 
-        //预加载的复用同一个ImageListener
+        //Reuse the same ImageListener
         if(null == preloadImageListener){
             preloadImageListener = new ImageLoader.ImageListener() {
                 @Override
