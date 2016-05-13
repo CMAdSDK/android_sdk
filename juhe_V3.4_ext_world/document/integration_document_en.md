@@ -234,12 +234,11 @@ when Activity destory，suggest destory bannerView
 
 ###3.3.1、InterstitialAd integration
 
-```
-//init InterstitialAdManager
-//parameter：Context , posid
-InterstitialAdManager interstitialAdManager＝new InterstitialAdManager(Context, posid)
-//set this callback interface if you need callback。
-interstitialAdManager.setInterstitialCallBack(new InterstitialAdCallBack() {
+		//init InterstitialAdManager
+		//parameter：Context , posid
+		InterstitialAdManager interstitialAdManager＝new InterstitialAdManager(Context, posid)
+		//set this callback interface if you need callback。
+		interstitialAdManager.setInterstitialCallBack(new InterstitialAdCallBack() {
 					@Override
 					public void onAdLoadFailed(int errorCode) {
 						//request failed								
