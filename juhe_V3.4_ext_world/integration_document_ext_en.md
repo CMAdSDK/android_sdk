@@ -60,8 +60,8 @@ load Ad for example :
 
 	 // The first parameter：Context
 	 // The second parameter：Posid
- 	 NativeAdManager nativeAdManager = new NativeAdManager(this, "Your posid");
- 	 nativeAdManager.setNativeAdListener(new INativeAdLoaderListener() {
+ 	 NativeAdManagerEx nativeAdManagerEx = new NativeAdManagerEx(this, "Your posid");
+ 	 nativeAdManagerEx.setNativeAdListener(new INativeAdLoaderListener() {
 		       @Override
 		       public void adLoaded() {
 				     //get ad
@@ -71,14 +71,16 @@ load Ad for example :
                       }
 				    
 				     //Initialize the ad view,and use the elemnets of the 
-				     //INativeAd object to fill the mAdView					//the layout should be prepared by yourself
+				     //INativeAd object to fill the mAdView
+					//the layout should be prepared by yourself
 		           	 View mAdView = View.inflate(MainActivity.this,"Your Ad layout", null);
 						
 		           
 		           
 		            //Bind the ad with the mAdView
 		            //notice: this step is necessary，if don't ,the event like 
-		            //click of the ad will not effective.		            //unregisterView should be used when the ad no need to show.
+		            //click of the ad will not effective.
+		            //unregisterView should be used when the ad no need to show.
 		             ad.registerViewForInteraction(mAdView);
 				
 		             if (mAdView != null) {
@@ -102,7 +104,7 @@ load Ad for example :
             }
         });
      
-  		nativeAdManager.loadAd();
+  		nativeAdManagerEx.loadAd();
   		
  if you want to display Ad :
  
@@ -110,11 +112,11 @@ load Ad for example :
  nativeAdManager.showAd();
 ```
 ####3.1.2、Native API
-- com.cmcm.adsdk.nativead.NativeAdManager
+- com.cmcm.adsdk.nativead.NativeAdManagerEx
 <table>
 <tbody>
 <tr><td>**Methodology**</td><td>**Method Introduction**</td></tr>
-<tr><td>NativeAdManager(Context context, String posid)</td><td>NativaAdManager construct function</td></tr>
+<tr><td>NativeAdManagerEx(Context context, String posid)</td><td>NativeAdManagerEx construct function</td></tr>
 <tr><td>setNativeAdListener(INativeAdLoaderListener listener)</td><td>set callback interface</td></tr>
 <tr><td>loadAd( )</td><td>concurrent load ads</td></tr>
 <tr><td>preloadAd( )</td><td>sequence load ads</td></tr>
