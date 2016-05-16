@@ -34,12 +34,12 @@ load Ad for example :
 
 	 // The first parameter：Context
 	 // The second parameter：Posid
- 	 NativeAdManager nativeAdManager = new NativeAdManager(this, "Your posid");
- 	 nativeAdManager.setNativeAdListener(new INativeAdLoaderListener() {
+ 	 NativeAdManagerMini nativeAdManagerMini = new NativeAdManagerMini(this, "Your posid");
+ 	 nativeAdManagerMini.setNativeAdListener(new INativeAdLoaderListener() {
 		       @Override
 		       public void adLoaded() {
 				 //get ad
-		       		 INativeAd ad = nativeAdManagerEx.getAd();
+		       		 INativeAd ad = nativeAdManagerMini.getAd();
 		       		 if (ad == null) {
                    			 return;
                       }
@@ -78,7 +78,7 @@ load Ad for example :
             }
         });
      
-  		nativeAdManager.loadAd();
+  		nativeAdManagerMini.loadAd();
   		
  if you want to display Ad :
  
@@ -86,14 +86,13 @@ load Ad for example :
  nativeAdManager.showAd();
 ```
 ####3.1.2、Native API
-- com.cmcm.adsdk.nativead.NativeAdManager
+- com.cmcm.adsdk.nativead.NativeAdManagerMini
 <table>
 <tbody>
 <tr><td>**Methodology**</td><td>**Method Introduction**</td></tr>
-<tr><td>NativeAdManager(Context context, String posid)</td><td>NativaAdManager construct function</td></tr>
+<tr><td>NativeAdManagerMini(Context context, String posid)</td><td>NativaAdManagerMini construct function</td></tr>
 <tr><td>setNativeAdListener(INativeAdLoaderListener listener)</td><td>set callback interface</td></tr>
 <tr><td>loadAd( )</td><td>concurrent load ads</td></tr>
-<tr><td>preloadAd( )</td><td>sequence load ads</td></tr>
 <tr><td>getAd( )</td><td>get ads</td></tr>
 </tbody>
 </table>
