@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.cmcm.ads.ui.OrionNativeAdview;
-import com.cmcm.adsdk.nativead.NativeAdManager;
+import com.cmcm.adsdk.nativead.NativeAdManagerEx;
 import com.cmcm.baseapi.ads.INativeAd;
 import com.cmcm.baseapi.ads.INativeAdLoaderListener;
 
@@ -19,7 +19,7 @@ import com.cmcm.baseapi.ads.INativeAdLoaderListener;
  */
 public class NativeAdSampleActivity extends Activity implements OnClickListener {
 
-    private NativeAdManager nativeAdManager;
+    private NativeAdManagerEx nativeAdManagerEx;
     private FrameLayout nativeAdContainer;//View Container
     private Button loadAdButton;
 	private String mAdPosid =  "1094101";
@@ -37,13 +37,13 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
     }
 
     private void initNativeAd() {
-        //setp1 : create nativeAdManager
+        //setp1 : create nativeAdManagerEx
         //The first parameter：Context
         //The second parameter: posid
-        nativeAdManager = new NativeAdManager(this, mAdPosid);
+        nativeAdManagerEx = new NativeAdManagerEx(this, mAdPosid);
 
         //setp2 : set callback listener(INativeAdLoaderListener)
-        nativeAdManager.setNativeAdListener(new INativeAdLoaderListener() {
+        nativeAdManagerEx.setNativeAdListener(new INativeAdLoaderListener() {
             @Override
             public void adLoaded() {
                 //ad load  success ,you can do other something here;
@@ -69,7 +69,7 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
 		switch (v.getId()) {
             case R.id.btn_req:
                 //step3 : start load nativeAd
-                nativeAdManager.loadAd();
+                nativeAdManagerEx.loadAd();
                 break;
             case R.id.btn_show:
                 showAd();
@@ -83,9 +83,9 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
      * if load nativeAd success,you can get and show nativeAd;
      */
     private void showAd(){
-        if(nativeAdManager != null){
+        if(nativeAdManagerEx != null){
 
-            INativeAd ad = nativeAdManager.getAd();
+            INativeAd ad = nativeAdManagerEx.getAd();
             if (ad == null) {
                 Toast.makeText(NativeAdSampleActivity.this,
                         "no native ad loaded!", Toast.LENGTH_SHORT).show();
