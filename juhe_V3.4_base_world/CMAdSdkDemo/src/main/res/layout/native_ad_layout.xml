@@ -34,7 +34,9 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:text="ad title"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="@color/Text_black"
+                />
 
             <TextView
                 android:id="@+id/big_sub_title"
@@ -43,7 +45,8 @@
                 android:layout_marginTop="6dp"
                 android:singleLine="true"
                 android:text=""
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textColor="@color/Text_black"/>
         </LinearLayout>
 
         <Button
@@ -79,6 +82,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:textColor="@color/Text_black"/>
 
 </LinearLayout>
