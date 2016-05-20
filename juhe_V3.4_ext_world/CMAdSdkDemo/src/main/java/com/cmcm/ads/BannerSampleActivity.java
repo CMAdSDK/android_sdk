@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.cmcm.adsdk.banner.CMAdView;
 import com.cmcm.adsdk.banner.CMBannerAdListener;
@@ -72,7 +73,7 @@ public class BannerSampleActivity extends Activity{
 
             @Override
             public void adFailedToLoad(CMAdView ad, int errorCode) {
-
+                Toast.makeText(BannerSampleActivity.this, "ad load  failed,error code is:" + errorCode, Toast.LENGTH_LONG).show();
             }
 
             @Override

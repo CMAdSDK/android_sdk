@@ -27,10 +27,10 @@ public class MyApplication extends Application {
         CMAdManager.applicationInit(this, "1094", "");
 
         //it is strongly recommended that custom imageload for interstitial
-        CMAdManagerFactory.setImageDownloadListener(new MyImageLoadListener());
+       CMAdManagerFactory.setImageDownloadListener(new MyImageLoadListener());
 
         //if you want to print debug log ,set it
-//      CMAdManager.enableLog();
+      CMAdManager.enableLog();
     }
 
 

@@ -92,24 +92,6 @@ public class OrionNativeAdview extends FrameLayout {
             // use Layout Resource : R.layout.native_ad_layout
             mNativeAdView = View.inflate(mContext, R.layout.native_ad_layout, this);
 
-            String iconUrl = ad.getAdIconUrl();
-            ImageView iconImageView = (ImageView) mNativeAdView
-                    .findViewById(R.id.big_iv_icon);
-            if (iconUrl != null) {
-                VolleyUtil.loadImage(iconImageView, iconUrl);
-            }
-            //get image url
-            String mainImageUrl = ad.getAdCoverImageUrl();
-            if (!TextUtils.isEmpty(mainImageUrl)) {
-                ImageView imageViewMain = (ImageView) mNativeAdView
-                        .findViewById(R.id.iv_main);
-                imageViewMain.setVisibility(View.VISIBLE);
-                VolleyUtil.loadImage(imageViewMain, mainImageUrl);
-            }
-
-            Log.e("URL", mainImageUrl != null ? mainImageUrl : "mainImageUrl is null");
-
-
             TextView titleTextView = (TextView) mNativeAdView.findViewById(R.id.big_main_title);
             TextView subtitleTextView = (TextView) mNativeAdView.findViewById(R.id.big_sub_title);
             Button bigButton = (Button) mNativeAdView.findViewById(R.id.big_btn_install);
@@ -121,6 +103,25 @@ public class OrionNativeAdview extends FrameLayout {
             bigButton.setText(ad.getAdCallToAction());
             bodyTextView.setText(ad.getAdBody());
         }
+        //以下代码移动到下面，加载admob图片
+        String iconUrl = ad.getAdIconUrl();
+        ImageView iconImageView = (ImageView) mNativeAdView
+                .findViewById(R.id.big_iv_icon);
+        if (iconUrl != null) {
+            VolleyUtil.loadImage(iconImageView, iconUrl);
+        }
+        //get image url
+        String mainImageUrl = ad.getAdCoverImageUrl();
+        if (!TextUtils.isEmpty(mainImageUrl)) {
+            ImageView imageViewMain = (ImageView) mNativeAdView
+                    .findViewById(R.id.iv_main);
+            imageViewMain.setVisibility(View.VISIBLE);
+            VolleyUtil.loadImage(imageViewMain, mainImageUrl);
+        }
+
+        Log.e("URL", mainImageUrl != null ? mainImageUrl : "mainImageUrl is null");
+
+
         if (mNativeAd != null) {
             mNativeAd.unregisterView();
         }

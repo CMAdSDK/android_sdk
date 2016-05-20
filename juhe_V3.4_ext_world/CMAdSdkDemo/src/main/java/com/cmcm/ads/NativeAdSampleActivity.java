@@ -9,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.cmcm.ads.ui.OrionNativeAdview;
+import com.cmcm.adsdk.CMAdManager;
 import com.cmcm.adsdk.nativead.NativeAdManagerEx;
 import com.cmcm.baseapi.ads.INativeAd;
 import com.cmcm.baseapi.ads.INativeAdLoaderListener;
@@ -21,7 +22,6 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
 
     private NativeAdManagerEx nativeAdManagerEx;
     private FrameLayout nativeAdContainer;//View Container
-    private Button loadAdButton;
 	private String mAdPosid =  "1094101";
     private OrionNativeAdview mAdView = null;
 
@@ -30,8 +30,7 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		nativeAdContainer = (FrameLayout) findViewById(R.id.big_ad_container);
-		loadAdButton = (Button) findViewById(R.id.btn_req);
-		loadAdButton.setOnClickListener(this);
+        findViewById(R.id.btn_req).setOnClickListener(this);
         findViewById(R.id.btn_show).setOnClickListener(this);
         initNativeAd();
     }
@@ -54,7 +53,7 @@ public class NativeAdSampleActivity extends Activity implements OnClickListener 
 
             @Override
             public void adFailedToLoad(int i) {
-                Toast.makeText(NativeAdSampleActivity.this, "ad load  failed", Toast.LENGTH_LONG).show();
+                Toast.makeText(NativeAdSampleActivity.this, "ad load  failed,error code is:"+i, Toast.LENGTH_LONG).show();
             }
 
             @Override
