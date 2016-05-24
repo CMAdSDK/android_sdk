@@ -20,7 +20,6 @@ public class InterstitalAdSampleActivity extends Activity {
 	private Button showBtn;
 	private Button loadBtn;
 	private String posid = "1094104";
-	private boolean isAdReady = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,7 @@ public class InterstitalAdSampleActivity extends Activity {
 			public void onClick(View v) {
 				//step4 : if load interstitialAd success ,
 				//        you can show Ad by InterstitialAdManager#showAd()
-				if(interstitialAdManager != null && isAdReady) {
+				if(interstitialAdManager != null) {
 					interstitialAdManager.showAd();
 				}
 			}
@@ -65,25 +64,23 @@ public class InterstitalAdSampleActivity extends Activity {
 					@Override
 					public void onAdLoaded() {
 						Toast.makeText(InterstitalAdSampleActivity.this, "interstitialAd load success",Toast.LENGTH_LONG).show();
-						isAdReady = true;
 					}
 
 					@Override
 					public void onAdClicked() {
-
+						Toast.makeText(InterstitalAdSampleActivity.this, "interstitialAd ad click",Toast.LENGTH_LONG).show();
 					}
 
 					@Override
 					public void onAdDisplayed() {
-						//ad display
+						Toast.makeText(InterstitalAdSampleActivity.this, "interstitialAd ad dispaly",Toast.LENGTH_LONG).show();
 					}
 
 					@Override
 					public void onAdDismissed() {
-						//click close button that ad destory
+						Toast.makeText(InterstitalAdSampleActivity.this, "interstitialAd ad dismisss",Toast.LENGTH_LONG).show();
 					}
 				});
-		isAdReady = false;
 		//step3 : start load interstitialAd by InterstitialAdManager#loadAd()
 		interstitialAdManager.loadAd();
 	}

@@ -42,7 +42,7 @@ repositories {
 
 
 dependencies {
-    compile(name: 'cmadsdk_world_base_V3.4.1', ext: 'aar')
+    compile(name: 'cmadsdk_world_base_V3.4.3', ext: 'aar')
     compile 'com.android.support:support-v4:22.2.0'
     compile files('libs/volley.jar')
 }
