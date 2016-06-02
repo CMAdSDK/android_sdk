@@ -67,7 +67,7 @@ repositories {
 
 
 dependencies {
-    worldCompile(name: 'cmadsdk_base_world_V3.3.0', ext: 'aar')
+    worldCompile(name: 'cmadsdk_base_world_V3.3.1', ext: 'aar')
     compile 'com.android.support:support-v4:22.2.0'
     compile files('libs/volley.jar')
 }
@@ -84,14 +84,3 @@ android.applicationVariants.all { variant ->
         }
     }
 }
-
-
-assembleRelease.doLast {
-    copy {
-        from gAssembleApkPath
-        into getAARDesfolder()
-        include '*.apk'
-        exclude '*unaligned*'
-    }
-}
-
