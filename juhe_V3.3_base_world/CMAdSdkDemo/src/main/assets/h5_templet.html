@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+</head>
+
+<body style="margin:0;padding:0;">
+<script type="text/javascript">
+    var   impUrls = [];
+
+    function cmFinishLoad() {
+        setTimeout(function() {
+            window.location = 'orion://finishLoad'
+        }, 0);
+    }
+    if(impTrackingHelper == null || !isFunction(impTrackingHelper)){
+        function impTrackingHelper(){
+            setTracking(impUrls);
+        }
+    }
+    function isArray(obj) {
+        return Object.prototype.toString.call(obj) === '[object Array]';
+    };
+
+    function isString(obj) {
+        return Object.prototype.toString.call(obj) === '[object String]';
+    };
+    function isFunction(obj){
+        return Object.prototype.toString.call(obj) === '[object Function]';
+    }
+
+    function tracking(url) {
+        new Image().src = url;
+    };
+
+    function setTracking(urls) {
+        if (isArray(urls)) {
+            for (var i = 0; i < urls.length; i++) {
+                tracking(urls[i]);
+            }
+            return true;
+        }
+        if (isString(urls)) {
+            tracking(urls);
+        }
+    }
+
+</script>
+
+<div style="width:1px;height:1px;position:relative;display:none">
+</div>
+
+<div style="width:320px; height:250px;overflow:hidden;position:relative;">
+    HTMLDATASTART
+</div>
+
+<script type="text/javascript">
+    if(typeof htmlFinishLoad == "undefined" || !htmlFinishLoad){
+        window.onload = cmFinishLoad;
+    }
+    if(typeof impTrackingHelper == 'function') { impTrackingHelper(); }
+
+</script>
+</body>
+
+</html>

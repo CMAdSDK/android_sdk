@@ -1,0 +1,67 @@
+{
+	"poslist": [
+	{
+        /* 原生广告 native ad */
+        "adtype": 1,
+        "placeid": 1096101,
+        "info": [{
+            "name": "cm",
+            "parameter": "1096101",
+            "weight": 1
+        }, {
+            "name": "bd",
+            "parameter": "2007962",
+            "weight": 5
+        }, {
+            "name": "gdt",
+            "parameter": "1103498166_4000307655866441",
+            "weight": 4
+        }, {
+             "name": "gdt_low",
+             "parameter": "1103498166_4000307655866441",
+             "weight": 2
+         }, {
+            "name": "gdt.bad",
+            "parameter": "1103498166_4000307655866441",
+            "weight": 6
+        }
+        ]
+    },
+    {
+	    /* 插屏 */
+		"adtype": 2,
+		"placeid": 1096100,
+		"info": [{
+			"name": "cm",
+			"parameter": "1096100",
+			"weight": 5
+		}, {
+			"name": "bd",
+			"parameter": "2007961",
+			"weight": 2
+		}]
+	},
+	{
+	    /* 开屏 splash-ad */
+		"adtype": 1,
+		"placeid": 1096104,
+		"info": [{
+			"name": "cm",
+			"parameter": "1096104",
+			"weight": 4
+		}, {
+			"name": "bd",
+			"parameter": "",
+			"weight": 0
+		}, {
+			"name": "gdt",
+			"parameter": "1101152570_8863364436303842593",
+			"weight": 3
+		},
+		{
+            "name": "ic",
+            "parameter": "OPEN_SPLASH",
+            "weight": 0
+        }]
+	}]
+}
