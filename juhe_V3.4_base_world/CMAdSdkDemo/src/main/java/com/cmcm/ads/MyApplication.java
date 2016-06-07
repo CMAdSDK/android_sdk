@@ -29,7 +29,10 @@ public class MyApplication extends Application {
         CMAdManagerFactory.setImageDownloadListener(new MyImageLoadListener());
 
         //if you want to print debug log ,set it
-//      CMAdManager.enableLog();
+        //CMAdManager.enableLog();
+
+        //!!!!the code below only used for our demo,please do not integrate into you codes
+        CMAdManager.enableTestCountry();
     }
 
 
