@@ -26,12 +26,22 @@ android {
         }
     }
 
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'cmmobsample'
+            keyPassword '123456'
+            storeFile file('cmmob.keystore')
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             zipAlignEnabled true
             shrinkResources true
             proguardFiles 'proguard-project.txt'
+            signingConfig signingConfigs.releaseConfig
         }
     }
 }
@@ -44,8 +54,30 @@ repositories {
 
 
 dependencies {
-    compile(name: 'cmadsdk_world_base_V3.4.5', ext: 'aar')
+    compile(name: 'cmadsdk_world_base_V3.4.6', ext: 'aar')
     compile 'com.android.support:support-v4:22.2.0'
     compile files('libs/volley.jar')
 }
 
+/**
+ * 系统打包的默认目录
+ */
+def gAssembleApkPath = ''
+android.applicationVariants.all { variant ->
+    if (variant.buildType.name.equals('release')) {
+        variant.outputs.each { output ->
+            gAssembleApkPath = output.packageApplication.outputFile.parent
+            println 'gAssembleApkPath is ' + gAssembleApkPath
+        }
+    }
+}
+
+
+assembleRelease.doLast {
+    copy {
+        from gAssembleApkPath
+        into getAARDesfolder()
+        include '*.apk'
+        exclude '*unaligned*'
+    }
+}
