@@ -73,11 +73,3 @@ android.applicationVariants.all { variant ->
 }
 
 
-assembleRelease.doLast {
-    copy {
-        from gAssembleApkPath
-        into getAARDesfolder()
-        include '*.apk'
-        exclude '*unaligned*'
-    }
-}
