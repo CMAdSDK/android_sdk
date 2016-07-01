@@ -14,8 +14,12 @@ import com.cmcm.ads.R;
 import com.cmcm.ads.utils.VolleyUtil;
 import com.cmcm.adsdk.Const;
 import com.cmcm.baseapi.ads.INativeAd;
+import com.cmcm.picks.loader.Ad;
 import com.google.android.gms.ads.formats.NativeAppInstallAdView;
 import com.google.android.gms.ads.formats.NativeContentAdView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * this Ad view  custom by publisher
@@ -87,6 +91,33 @@ public class OrionNativeAdview extends FrameLayout {
             //if mpbanner ,direct get View and add to parent view
             mNativeAdView = (View) ad.getAdObject();
             addView(mNativeAdView);
+        }else if(ad.getAdTypeName().equals(Const.KEY_CM) && ((Ad)ad.getAdObject()).getAppShowType() ==Ad.SHOW_TYPE_NEWS_THREE_PIC){
+            mNativeAdView = View.inflate(mContext,R.layout.native_ad_three_pics,this);
+            //The SHOW_TYPE_NEWS_THREE_PIC contain three pictures ,you can call getExtPics() get the url list of pictures.
+            List<String> pics = ad.getExtPics();
+            ImageView img1 = (ImageView)mNativeAdView.findViewById(R.id.iv_pic1);
+            ImageView img2 =(ImageView)mNativeAdView.findViewById(R.id.iv_pic2);
+            ImageView img3 = (ImageView)mNativeAdView.findViewById(R.id.iv_pic3);
+            List<ImageView> imgList = new ArrayList<ImageView>();
+            imgList.add(img1);
+            imgList.add(img2);
+            imgList.add(img3);
+            if(!pics.isEmpty()) {
+                for (int i = 0; i < imgList.size(); i++) {
+                    VolleyUtil.loadImage(imgList.get(i), pics.get(i));
+                }
+            }
+
+            TextView titleTextView = (TextView) mNativeAdView.findViewById(R.id.big_main_title);
+            TextView subtitleTextView = (TextView) mNativeAdView.findViewById(R.id.big_sub_title);
+            Button bigButton = (Button) mNativeAdView.findViewById(R.id.big_btn_install);
+            TextView bodyTextView = (TextView) mNativeAdView.findViewById(R.id.text_body);
+
+            titleTextView.setText(ad.getAdTitle());
+            subtitleTextView.setText(ad.getAdTypeName());
+            bigButton.setText(ad.getAdCallToAction());
+            bodyTextView.setText(ad.getAdBody());
+
         } else {
             //if Ad resource from cm,fb,mopub ...
             // use Layout Resource : R.layout.native_ad_layout
@@ -97,26 +128,36 @@ public class OrionNativeAdview extends FrameLayout {
             Button bigButton = (Button) mNativeAdView.findViewById(R.id.big_btn_install);
             TextView bodyTextView = (TextView) mNativeAdView.findViewById(R.id.text_body);
 
-            //fill ad data
             titleTextView.setText(ad.getAdTitle());
             subtitleTextView.setText(ad.getAdTypeName());
             bigButton.setText(ad.getAdCallToAction());
             bodyTextView.setText(ad.getAdBody());
         }
-        //以下代码移动到下面，加载admob图片
+        //fill other ad data
         String iconUrl = ad.getAdIconUrl();
         ImageView iconImageView = (ImageView) mNativeAdView
                 .findViewById(R.id.big_iv_icon);
         if (iconUrl != null) {
             VolleyUtil.loadImage(iconImageView, iconUrl);
         }
-        //get image url
+
         String mainImageUrl = ad.getAdCoverImageUrl();
         if (!TextUtils.isEmpty(mainImageUrl)) {
             ImageView imageViewMain = (ImageView) mNativeAdView
                     .findViewById(R.id.iv_main);
-            imageViewMain.setVisibility(View.VISIBLE);
-            VolleyUtil.loadImage(imageViewMain, mainImageUrl);
+           if (imageViewMain != null){
+               imageViewMain.setVisibility(View.VISIBLE);
+               VolleyUtil.loadImage(imageViewMain, mainImageUrl);
+           }
+        }
+
+        //when SHOW_TYPE_NEWS_THREE_PIC,set imageViewMain invisible.
+        if(ad.getAdTypeName().equals(Const.KEY_CM) && ((Ad)ad.getAdObject()).getAppShowType() ==Ad.SHOW_TYPE_NEWS_THREE_PIC){
+            ImageView imageViewMain = (ImageView) mNativeAdView
+                    .findViewById(R.id.iv_main);
+            if (imageViewMain != null){
+                imageViewMain.setVisibility(View.INVISIBLE);
+            }
         }
 
         Log.e("URL", mainImageUrl != null ? mainImageUrl : "mainImageUrl is null");
