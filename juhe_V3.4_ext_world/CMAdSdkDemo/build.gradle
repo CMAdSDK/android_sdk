@@ -54,9 +54,14 @@ repositories {
 
 
 dependencies {
-    compile(name: 'cmadsdk_world_ext_V3.4.7', ext: 'aar')
+    //测试去除mopub sdk 的demo
+    compile(name: 'cmadsdk_world_base_V3.4.7', ext: 'aar')
     compile 'com.android.support:support-v4:22.2.0'
     compile files('libs/volley.jar')
+    compile files('libs/flurryNativeAds_1.1.2.jar')
+    compile files('libs/mopub-sdk.jar')
+    compile files('libs/AudienceNetwork.jar')
+    compile files('libs/mopub-volley-1.1.0.jar')
 
     compile(name: 'play-services-ads-7.8.0', ext: 'aar')
     compile(name: 'play-services-analytics-7.8.0', ext: 'aar')

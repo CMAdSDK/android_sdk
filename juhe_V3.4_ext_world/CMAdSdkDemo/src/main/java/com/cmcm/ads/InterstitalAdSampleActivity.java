@@ -2,6 +2,7 @@ package com.cmcm.ads;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -88,4 +89,5 @@ public class InterstitalAdSampleActivity extends Activity {
 		//step3 : start load interstitialAd by InterstitialAdManager#loadAd()
 		interstitialAdManager.loadAd();
 	}
+	
 }

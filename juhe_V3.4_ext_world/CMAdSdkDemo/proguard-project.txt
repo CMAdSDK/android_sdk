@@ -116,7 +116,77 @@
 -keepclasseswithmembers class * {
     public <init>(android.content.Context, android.util.AttributeSet, int);
 }
--keep class com.google.android.gms.ads.** {*;}
--dontwarn com.google.android.gms.ads.**
--keep class com.google.android.gms.** {*;}
--dontwarn com.google.android.gms.**
+
+
+
+
+ -keep class com.cmcm.adsdk.adapter.MopubNativeAdapter{ *; }
+ -keep class com.cmcm.adsdk.adapter.FacebookNativeAdapter{ *; }
+ -keep class com.cmcm.adsdk.adapter.AdmobNativeAdapter{ *; }
+ -keep class com.cmcm.adsdk.adapter.YahooNativeAdapter{ *; }
+
+ # mopub 广告混淆脚本
+ -keep class  com.mopub.nativeads.*{*;}
+ -keep class  com.mopub.common.**{*;}
+ -keep class  com.mopub.network.**{*;}
+ -dontwarn com.mopub.**
+ -keep class com.cmcm.adsdk.nativead.MopubNativeAdLoader{
+         <fields>;
+         <methods>;
+ }
+ -keep class com.mopub.mobileads.MoPubActivity{
+         <fields>;
+         <methods>;
+ }
+ -keep class com.mopub.mobileads.MraidActivity{
+         <fields>;
+         <methods>;
+ }
+ -keep class com.mopub.common.MoPubBrowser{
+         <fields>;
+         <methods>;
+ }
+ -keep class com.mopub.mobileads.MraidVideoPlayerActivity{
+         <fields>;
+         <methods>;
+ }
+
+
+ #for yahoo
+ -keep class com.cmcm.adsdk.nativead.FlurryNativeLoader{
+         <fields>;
+         <methods>;
+      }
+ -keep class com.flurry.** { *; }
+ -dontwarn com.flurry.**
+ -keepattributes *Annotation*,EnclosingMethod
+
+ -keep class com.google.android.gms.ads.** {*;}
+ -dontwarn com.google.android.gms.ads.**
+ -keep class com.google.android.gms.** {*;}
+ -dontwarn com.google.android.gms.**
+
+
+
+#for admob
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+-keep class com.google.ads.AdActivity{
+        <fields>;
+		<methods>;
+}
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+-keep public class com.google.ads.**{
+   public *;
+}
