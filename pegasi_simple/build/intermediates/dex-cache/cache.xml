@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\sdk\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\support-annotations-22.2.0_42e760ac50539bedbf9bd3d4ba399d7fe37e7e47.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\libs\mopub-sdk.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="79087cdb5040e07055358bc0a13a36e62600f10c">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\mopub-sdk_d141f39c056496ed1ddbab00fd9988a9e32e05de.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\libs\AudienceNetwork.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a10c638502a9d5520cc6b3f8fc03ce8269a15060">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\AudienceNetwork_7af3187f20148c1edf8c6b692301c9936df897ae.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\libs\flurryNativeAds_1.1.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="653349044e67cb8b9bdc8e4242c86de4b41c4ead">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\flurryNativeAds_1.1.2_d9eb55717f43d6a3c7a28f7e55a657291b3c060c.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\libs\volley.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="83424ee3e7260241f5f9f0ed168f441de582a0ae">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\volley_ba1011dc3c86c583e9bc8a7fae923e89ca680308.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\internal_impl-22.2.0_2e2a01961bd7cc91b7727ae1bc6429e939fd9ed7.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\exploded-aar\play-services-base-7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\intermediates-exploded-aar-play-services-base-7.8.0_72d7e06136221e6c755a71f4949046bbc0513c05.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\com.android.support-support-v4-22.2.0_195805d37c9b80ab65951fcafe0310ba0f03969a.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\exploded-aar\cmadsdk_world_base_V3.4.7\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2b905bcfc1f20970fea5bafb08eb8252f1953aef">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\intermediates-exploded-aar-cmadsdk_world_base_V3.4.7_83a4b1b43633006d368f76e2e98c41260a7cde3f.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\exploded-aar\play-services-ads-7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ff30fa49c07a08c3035d7218a3efebf5680d522">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\intermediates-exploded-aar-play-services-ads-7.8.0_857cff26f770ee9261843ac8f657beb775fc57db.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\libs\mopub-volley-1.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4357bce66ae3bb9be50679e43df122fd0a8f3394">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\mopub-volley-1.1.0_73d18bc317818d6cb94f9aaeabd1c9361b27b733.jar" />
+    </item>
+    <item
+        jar="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\exploded-aar\play-services-analytics-7.8.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0124ce31248c0e8acfa2b28283c6d1a4d76e73d2">
+        <dex dex="C:\code\pegasi_github_en\android_sdk\pegasi_simple\build\intermediates\pre-dexed\world\debug\intermediates-exploded-aar-play-services-analytics-7.8.0_c28a6a6f5ba8c94e68bf8548442cff5dbaf2e468.jar" />
+    </item>
+
+</items>

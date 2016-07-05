@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\CMAdSdkDemo\\build\\intermediates\\res\\merged\\world\\debug\\raw\\gtm_analytics",
+        "source": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\CMAdSdkDemo\\build\\intermediates\\exploded-aar\\play-services-analytics-7.8.0\\res\\raw\\gtm_analytics"
+    },
+    {
+        "merged": "C:\\code\\pegasi\\pegasi_simple\\build\\intermediates\\res\\merged\\world\\debug\\raw\\gtm_analytics",
+        "source": "C:\\code\\pegasi\\pegasi_simple\\build\\intermediates\\exploded-aar\\play-services-analytics-7.8.0\\res\\raw\\gtm_analytics"
+    },
+    {
+        "merged": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\build\\intermediates\\res\\merged\\world\\debug\\raw\\gtm_analytics",
+        "source": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\build\\intermediates\\exploded-aar\\play-services-analytics-7.8.0\\res\\raw\\gtm_analytics"
+    }
+]

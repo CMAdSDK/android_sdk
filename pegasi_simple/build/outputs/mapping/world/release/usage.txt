@@ -1,0 +1,388 @@
+android.support.annotation.AnimRes
+android.support.annotation.AnimatorRes
+android.support.annotation.AnyRes
+android.support.annotation.ArrayRes
+android.support.annotation.AttrRes
+android.support.annotation.BinderThread
+android.support.annotation.BoolRes
+android.support.annotation.CallSuper
+android.support.annotation.CheckResult
+android.support.annotation.ColorInt
+android.support.annotation.ColorRes
+android.support.annotation.DimenRes
+android.support.annotation.DrawableRes
+android.support.annotation.FloatRange
+android.support.annotation.FractionRes
+android.support.annotation.IdRes
+android.support.annotation.IntDef
+android.support.annotation.IntRange
+android.support.annotation.IntegerRes
+android.support.annotation.InterpolatorRes
+android.support.annotation.Keep
+android.support.annotation.LayoutRes
+android.support.annotation.MainThread
+android.support.annotation.MenuRes
+android.support.annotation.NonNull
+android.support.annotation.Nullable
+android.support.annotation.PluralsRes
+android.support.annotation.RawRes
+android.support.annotation.RequiresPermission
+android.support.annotation.RequiresPermission$Read
+android.support.annotation.RequiresPermission$Write
+android.support.annotation.Size
+android.support.annotation.StringDef
+android.support.annotation.StringRes
+android.support.annotation.StyleRes
+android.support.annotation.StyleableRes
+android.support.annotation.TransitionRes
+android.support.annotation.UiThread
+android.support.annotation.VisibleForTesting
+android.support.annotation.WorkerThread
+android.support.annotation.XmlRes
+com.android.volley.AuthFailureError:
+    31:33:public AuthFailureError(android.content.Intent)
+    40:41:public AuthFailureError(java.lang.String)
+    44:45:public AuthFailureError(java.lang.String,java.lang.Exception)
+    48:48:public android.content.Intent getResolutionIntent()
+com.android.volley.BuildConfig
+com.android.volley.Cache:
+    public abstract void invalidate(java.lang.String,boolean)
+    public abstract void remove(java.lang.String)
+    public abstract void clear()
+com.android.volley.DefaultRetryPolicy:
+    public static final int DEFAULT_TIMEOUT_MS
+    public static final int DEFAULT_MAX_RETRIES
+    public static final float DEFAULT_BACKOFF_MULT
+    83:83:public float getBackoffMultiplier()
+com.android.volley.ExecutorDelivery:
+    49:51:public ExecutorDelivery(java.util.concurrent.Executor)
+com.android.volley.NetworkResponse:
+    47:48:public NetworkResponse(int,byte[],java.util.Map,boolean)
+    51:52:public NetworkResponse(byte[])
+com.android.volley.Request:
+    private static final java.lang.String DEFAULT_PARAMS_ENCODING
+    private static final long SLOW_REQUEST_THRESHOLD_MS
+    private java.lang.Object mTag
+    122:123:public Request(java.lang.String,com.android.volley.Response$ErrorListener)
+    154:155:public com.android.volley.Request setTag(java.lang.Object)
+    163:163:public java.lang.Object getTag()
+    170:170:public com.android.volley.Response$ErrorListener getErrorListener()
+    277:280:public final int getSequence()
+    478:479:public final com.android.volley.Request setShouldCache(boolean)
+com.android.volley.Request$Method
+com.android.volley.RequestQueue:
+    private static final int DEFAULT_NETWORK_THREAD_POOL_SIZE
+    181:181:public com.android.volley.Cache getCache()
+    197:204:public void cancelAll(com.android.volley.RequestQueue$RequestFilter)
+    211:220:public void cancelAll(java.lang.Object)
+    304:307:public void addRequestFinishedListener(com.android.volley.RequestQueue$RequestFinishedListener)
+    313:316:public void removeRequestFinishedListener(com.android.volley.RequestQueue$RequestFinishedListener)
+com.android.volley.RequestQueue$1
+com.android.volley.RequestQueue$RequestFilter
+com.android.volley.VolleyError:
+    36:38:public VolleyError(java.lang.String)
+    41:43:public VolleyError(java.lang.String,java.lang.Throwable)
+    55:55:public long getNetworkTimeMs()
+com.android.volley.VolleyLog:
+    46:51:public static void setTag(java.lang.String)
+    72:73:public static varargs void wtf(java.lang.String,java.lang.Object[])
+    76:77:public static varargs void wtf(java.lang.Throwable,java.lang.String,java.lang.Object[])
+com.android.volley.VolleyLog$MarkerLog:
+    private static final long MIN_DURATION_FOR_LOGGING_MS
+com.android.volley.toolbox.AndroidAuthenticator
+com.android.volley.toolbox.Authenticator
+com.android.volley.toolbox.BasicNetwork:
+    222:224:protected void logError(java.lang.String,java.lang.String,long)
+com.android.volley.toolbox.ClearCacheRequest
+com.android.volley.toolbox.DiskBasedCache:
+    private static final int DEFAULT_DISK_USAGE_BYTES
+    private static final float HYSTERESIS_FACTOR
+    private static final int CACHE_MAGIC
+    91:100:public synchronized void clear()
+    191:200:public synchronized void invalidate(java.lang.String,boolean)
+com.android.volley.toolbox.HttpClientStack:
+    private static final java.lang.String HEADER_CONTENT_TYPE
+    67:71:private static java.util.List getPostParameterPairs(java.util.Map)
+com.android.volley.toolbox.HttpClientStack$HttpPatch:
+    public static final java.lang.String METHOD_NAME
+    176:178:public HttpClientStack$HttpPatch(java.net.URI)
+com.android.volley.toolbox.HttpHeaderParser:
+    31:31:public HttpHeaderParser()
+    145:158:public static java.lang.String parseCharset(java.util.Map,java.lang.String)
+    166:166:public static java.lang.String parseCharset(java.util.Map)
+com.android.volley.toolbox.HurlStack:
+    private static final java.lang.String HEADER_CONTENT_TYPE
+com.android.volley.toolbox.ImageLoader:
+    99:99:public com.android.volley.toolbox.ImageLoader$ImageCache getImageCache()
+    112:112:public static com.android.volley.toolbox.ImageLoader$ImageListener getImageListener(android.widget.ImageView,int,int)
+    166:166:public boolean isCached(java.lang.String,int,int)
+    179:182:public boolean isCached(java.lang.String,int,int,android.widget.ImageView$ScaleType)
+    264:286:public java.lang.String getProcessName()
+    327:328:public void setBatchedResponseDelay(int)
+com.android.volley.toolbox.ImageLoader$1
+com.android.volley.toolbox.ImageRequest:
+    private static final int IMAGE_TIMEOUT_MS
+    private static final int IMAGE_MAX_RETRIES
+    private static final float IMAGE_BACKOFF_MULT
+    91:93:public ImageRequest(java.lang.String,com.android.volley.Response$Listener,int,int,android.graphics.Bitmap$Config,com.android.volley.Response$ErrorListener)
+com.android.volley.toolbox.JsonArrayRequest
+com.android.volley.toolbox.JsonObjectRequest
+com.android.volley.toolbox.JsonRequest
+com.android.volley.toolbox.NetworkImageView:
+    53:54:public NetworkImageView(android.content.Context)
+    57:58:public NetworkImageView(android.content.Context,android.util.AttributeSet)
+    77:81:public void setImageUrl(java.lang.String,com.android.volley.toolbox.ImageLoader)
+    88:89:public void setDefaultImageResId(int)
+    96:97:public void setErrorImageResId(int)
+com.android.volley.toolbox.NoCache
+com.android.volley.toolbox.PoolingByteArrayOutputStream:
+    private static final int DEFAULT_SIZE
+    40:41:public PoolingByteArrayOutputStream(com.android.volley.toolbox.ByteArrayPool)
+com.android.volley.toolbox.RequestFuture
+com.android.volley.toolbox.StringRequest
+com.android.volley.toolbox.Volley:
+    private static final java.lang.String DEFAULT_CACHE_DIR
+    30:30:public Volley()
+com.cmcm.ads.BuildConfig
+com.cmcm.ads.R
+com.cmcm.ads.R$anim
+com.cmcm.ads.R$attr
+com.cmcm.ads.R$color
+com.cmcm.ads.R$dimen
+com.cmcm.ads.R$drawable
+com.cmcm.ads.R$id
+com.cmcm.ads.R$integer
+com.cmcm.ads.R$layout
+com.cmcm.ads.R$raw
+com.cmcm.ads.R$string
+com.cmcm.ads.R$style
+com.cmcm.ads.R$styleable
+com.cmcm.ads.ui.OrionNativeAdview:
+    56:59:public OrionNativeAdview(android.content.Context,android.util.AttributeSet)
+com.cmcm.ads.utils.VolleyUtil:
+    private static com.android.volley.toolbox.ImageLoader$ImageListener preloadImageListener
+    17:90:public VolleyUtil()
+    68:88:public static void preloadImage(java.lang.String)
+com.cmcm.ads.utils.VolleyUtil$2
+com.cmcm.baseapi.ads.INativeAd:
+    public abstract java.lang.String getAdSocialContext()
+    public abstract double getAdStarRating()
+    public abstract boolean registerViewForInteraction_withExtraReportParams(android.view.View,java.util.Map)
+    public abstract void setImpressionListener(com.cmcm.baseapi.ads.INativeAd$ImpressionListener)
+    public abstract void setAdOnClickListener(com.cmcm.baseapi.ads.INativeAd$IAdOnClickListener)
+    public abstract com.cmcm.baseapi.ads.INativeAd$IAdOnClickListener getAdOnClickListener()
+    public abstract boolean isNativeAd()
+    public abstract com.cmcm.picks.loader.MpaModule getMpaModule()
+com.cmcm.baseapi.ads.INativeAdLoader:
+    public abstract void setAdListener(com.cmcm.baseapi.ads.INativeAdLoaderListener)
+    public abstract void loadAd()
+com.cmcm.picks.init.IPicksBrowserCallBack
+com.cmcm.picks.init.PicksMob:
+    8:8:public void downloadSuccessReport(java.lang.String,com.cmcm.picks.loader.Ad,java.lang.String)
+    12:12:public void reportDowned(java.lang.String)
+    17:17:public void reportInstall(java.lang.String)
+    21:21:public boolean ishaveInternalDown()
+com.cmcm.picks.init.a:
+    public static com.cmcm.picks.init.IPicksBrowserCallBack sIPicksCallBack
+    48:49:public void loadad(int,com.cmcm.picks.init.ICallBack,int,boolean)
+    public abstract void downloadSuccessReport(java.lang.String,com.cmcm.picks.loader.Ad,java.lang.String)
+    public abstract void reportDowned(java.lang.String)
+    public abstract void reportInstall(java.lang.String)
+    public abstract boolean ishaveInternalDown()
+    157:158:public void setPicksBrowserCallBack(com.cmcm.picks.init.IPicksBrowserCallBack)
+    161:161:public com.cmcm.picks.init.IPicksBrowserCallBack getIPicksCallBack()
+com.cmcm.picks.loader.Ad:
+    public static final int SHOW_TYPE_HAVE_PIC_BIG_CARD
+    public static final int SHOW_TYPE_NO_PIC_SMALL_CARD
+    public static final int SHOW_TYPE_VAST
+    public static final int SHOW_TYPE_NEWS_SMALL_PIC
+    public static final int SHOW_TYPE_NEWS_THREE_PIC
+    public static final int SHOW_TYPE_AD_MPA
+    public static final int MT_TYPE_OPEN_DOWNLOAD
+    public static final int MT_TYPE_OPEN_INTERNAL
+    public static final int MT_TYPE_OPEN_BROWSER
+    public static final int MT_TYPE_OPEN_DEEPLINK
+    55:55:public boolean isPriority()
+    250:253:public static com.cmcm.picks.loader.Ad createAd(java.lang.String)
+    293:293:public static int getShowTypeHavePicBigCard()
+com.cmcm.picks.loader.Mpa:
+    25:26:public void setMpa_id(java.lang.String)
+    29:29:public java.lang.String getMpa_id()
+    33:34:public void setAc(java.lang.String)
+    37:37:public java.lang.String getAc()
+    41:42:public void setTitle(java.lang.String)
+    45:45:public java.lang.String getTitle()
+    49:50:public void setPic_url(java.lang.String)
+    53:53:public java.lang.String getPic_url()
+    57:58:public void setPkg_url(java.lang.String)
+    61:61:public java.lang.String getPkg_url()
+com.cmcm.picks.loader.MpaModule:
+    16:16:public java.util.List getMpa()
+com.cmcm.picks.market.MarketUtils:
+    30:30:public MarketUtils()
+    56:56:private static java.lang.String getPreloadTraceUrl(java.lang.String)
+com.cmcm.picks.mixad.IAd
+com.cmcm.picks.mixad.IAdError
+com.cmcm.picks.mixad.IMixBoxAd
+com.cmcm.picks.mixad.IMixBoxAd$1
+com.cmcm.picks.mixad.IMixBoxDelegate
+com.cmcm.picks.mixad.IMixBoxDownloadListener
+com.cmcm.picks.mixad.IMixBoxListener
+com.cmcm.picks.mixad.IMixBoxReddotListener
+com.cmcm.picks.mixad.MixBeans
+com.cmcm.picks.mixad.MixBeans$1
+com.cmcm.picks.mixad.MixBeans$2
+com.cmcm.picks.mixad.MixBeans$3
+com.cmcm.picks.mixad.MixBoxAdHelper
+com.cmcm.picks.mixad.MixBoxManager
+com.cmcm.picks.mixad.MixBoxManager$1
+com.cmcm.picks.mixad.MixBoxManager$POS_TYPE
+com.cmcm.picks.mixad.MixBoxManager$ParseTask
+com.cmcm.picks.mixad.MixBoxManager$ParseTask$1
+com.cmcm.picks.mixad.MixController
+com.cmcm.picks.mixad.MixSPUtil
+com.cmcm.picks.utils.PicksMessageHelper
+com.cmcm.picks.vastvideo.FullScreenVideoActivity:
+    46:47:public static void a(com.cmcm.picks.vastvideo.a)
+com.cmcm.picks.vastvideo.IVastVideoBaseAdapter
+com.cmcm.picks.vastvideo.VastAd
+com.cmcm.picks.vastvideo.VastAd$1
+com.cmcm.picks.vastvideo.VastAd$2
+com.cmcm.picks.vastvideo.VastAd$3
+com.cmcm.picks.vastvideo.VastAd$4
+com.cmcm.picks.vastvideo.VastAd$VastVideoListener
+com.cmcm.picks.vastvideo.VastAd$VastVideoLogListener
+com.cmcm.picks.vastvideo.VastModel:
+    private boolean C
+    private double F
+    private int G
+    68:69:public VastModel()
+    223:223:public java.lang.String a()
+    227:227:public boolean b()
+    231:232:public void a(boolean)
+    267:267:public java.util.List k()
+    287:287:public java.util.List o()
+    291:291:public java.util.List p()
+    295:295:public java.util.List q()
+    307:307:public java.util.List t()
+    311:311:public java.lang.String u()
+    315:315:public java.lang.String v()
+    331:331:public boolean x()
+    339:339:public java.util.List y()
+    343:343:public int z()
+    348:349:public void a(java.lang.String)
+    352:353:public void b(java.lang.String)
+    356:357:public void a(java.util.List)
+    360:361:public void a(com.cmcm.picks.loader.Ad)
+    364:365:public void b(java.util.List)
+    368:369:public void c(java.util.List)
+    372:373:public void d(java.util.List)
+    376:377:public void e(java.util.List)
+    380:381:public void f(java.util.List)
+    384:385:public void g(java.util.List)
+    388:389:public void h(java.util.List)
+    392:393:public void i(java.util.List)
+    396:397:public void j(java.util.List)
+    400:401:public void k(java.util.List)
+    404:405:public void l(java.util.List)
+    412:413:public void m(java.util.List)
+    416:417:public void n(java.util.List)
+    420:421:public void o(java.util.List)
+    424:425:public void c(java.lang.String)
+    428:429:public void p(java.util.List)
+    432:433:public void q(java.util.List)
+    436:437:public void d(java.lang.String)
+    440:441:public void e(java.lang.String)
+    444:445:public void f(java.lang.String)
+    448:449:public void g(java.lang.String)
+    456:457:public void b(boolean)
+    460:461:public void r(java.util.List)
+    464:465:public void a(int)
+    468:496:public java.lang.String a(android.content.Context)
+    502:513:private void b(android.content.Context)
+    518:522:private double a(int,int)
+com.cmcm.picks.vastvideo.VastModel$a
+com.cmcm.picks.vastvideo.VastVideoProgressListener:
+    public abstract void onVastVideoShowFail(java.lang.String)
+com.cmcm.picks.vastvideo.VastView
+com.cmcm.picks.vastvideo.VastView$1
+com.cmcm.picks.vastvideo.VastView$2
+com.cmcm.picks.vastvideo.VastView$3
+com.cmcm.picks.vastvideo.VastView$a
+com.cmcm.picks.vastvideo.VastView$b
+com.cmcm.picks.vastvideo.VastView$c
+com.cmcm.picks.vastvideo.VastView$d
+com.cmcm.picks.vastvideo.VastView$e
+com.cmcm.picks.vastvideo.VastView$f
+com.cmcm.picks.vastvideo.a:
+    private boolean n
+    private boolean o
+    private boolean p
+    private boolean s
+    58:77:public a(com.cmcm.picks.vastvideo.VastModel)
+    80:97:public void a(boolean)
+    112:112:public boolean c()
+    116:117:public void b(boolean)
+    134:134:public boolean e()
+    157:157:public boolean g()
+    161:162:public void d(boolean)
+    165:165:public boolean h()
+    169:170:public void e(boolean)
+    173:174:public void a(com.cmcm.picks.vastvideo.VastVideoProgressListener)
+    177:178:public void i()
+    181:181:public boolean j()
+    185:186:public void f(boolean)
+    189:189:public boolean k()
+    205:210:public void b(int,int)
+    331:337:public static void a(com.cmcm.picks.vastvideo.VastModel)
+    383:388:public void k(int,int)
+com.cmcm.picks.vastvideo.b:
+    32:33:public void a(java.lang.String,long)
+    60:64:public boolean a(java.lang.String)
+com.cmcm.picks.vastvideo.e
+com.cmcm.picks.vastvideo.e$1
+com.cmcm.picks.vastvideo.e$2
+com.cmcm.picks.vastvideo.f:
+    22:22:public static java.lang.String a(java.lang.String)
+    71:73:public static int b()
+    81:84:public static long c()
+com.cmcm.picks.vastvideo.g
+com.cmcm.picks.vastvideo.g$1
+com.cmcm.picks.vastvideo.g$2
+com.cmcm.picks.vastvideo.g$a
+com.cmcm.picks.vastvideo.h
+com.cmcm.picks.vastvideo.h$1
+com.cmcm.picks.vastvideo.h$2
+com.cmcm.picks.vastvideo.h$a
+com.cmcm.picks.vastvideo.h$b
+com.cmcm.utils.Commons:
+    private static final java.lang.String PKG_NAME_SYSTEMPROPERTIES
+    public static final java.lang.String CIPHER_ALGORITHM
+    49:49:public Commons()
+    51:59:public static java.lang.String getIMEI(android.content.Context)
+    342:351:public static android.graphics.drawable.Drawable createDrawable(android.content.Context,java.lang.String)
+    385:389:public static byte[] encrypt(byte[],byte[])
+    393:397:private static java.security.Key keyGenerator(java.lang.String)
+    401:408:public static byte[] hexString2Bytes(java.lang.String)
+    412:414:private static int parse(char)
+    418:430:public static java.lang.String toHexString(byte[])
+    434:440:public static int getAdAppShowType(com.cmcm.baseapi.ads.INativeAd)
+com.cmcm.utils.ReportFactory:
+    public static final java.lang.String VIEW
+    public static final java.lang.String CLICK
+    public static final java.lang.String DETAIL_CLICK
+    public static final java.lang.String DOWN_SUCCESS
+    public static final java.lang.String INSTALL_SUCCESS
+    public static final java.lang.String CLICK_FAILED
+    public static final java.lang.String VAST_PLAY
+    public static final java.lang.String VAST_CLICK
+    public static final java.lang.String MPA_SHOW
+    public static final java.lang.String MPA_CLICK
+    16:16:public ReportFactory()
+    83:84:public static void reportForMpa(java.lang.String,com.cmcm.picks.loader.Ad,java.lang.String,java.lang.String,java.util.Map,int)
+    87:89:private static void report(java.lang.String,com.cmcm.picks.loader.Ad,java.lang.String,java.lang.String,java.util.Map,java.lang.Object,java.lang.Object,int)
+    100:100:private static com.cmcm.picks.loader.e parsePublicData(java.lang.String,java.lang.String,java.lang.String)
+com.cmcm.utils.ThreadHelper:
+    72:83:public static void runOnUiThreadBlocking(java.lang.Runnable)
+    183:184:public static void postOnUiThreadDelayed(java.lang.Runnable,long)
+    190:191:public static void assertOnUiThread()

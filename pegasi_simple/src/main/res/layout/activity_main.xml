@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MergeRootFrame" >
+    <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_req"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:background="@drawable/btn_blue_request"
+                    android:text="@string/loadAdButtonLabel"
+                    android:layout_weight="2"/>
+
+                <Button
+                    android:id="@+id/btn_show"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/btn_blue_request"
+                    android:text="@string/showAdButtonLabel"
+                    android:layout_weight="2"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/big_ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="2dp" >
+    </FrameLayout>
+</LinearLayout>

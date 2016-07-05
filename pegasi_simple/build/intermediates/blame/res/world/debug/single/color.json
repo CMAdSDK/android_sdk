@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\CMAdSdkDemo\\build\\intermediates\\res\\merged\\world\\debug\\color\\common_signin_btn_text_light.xml",
+        "source": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\CMAdSdkDemo\\build\\intermediates\\exploded-aar\\play-services-base-7.8.0\\res\\color\\common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\code\\pegasi\\pegasi_simple\\build\\intermediates\\res\\merged\\world\\debug\\color\\common_signin_btn_text_dark.xml",
+        "source": "C:\\code\\pegasi\\pegasi_simple\\build\\intermediates\\exploded-aar\\play-services-base-7.8.0\\res\\color\\common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\code\\pegasi\\pegasi_simple\\build\\intermediates\\res\\merged\\world\\debug\\color\\common_signin_btn_text_light.xml",
+        "source": "C:\\code\\pegasi\\pegasi_simple\\build\\intermediates\\exploded-aar\\play-services-base-7.8.0\\res\\color\\common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\build\\intermediates\\res\\merged\\world\\debug\\color\\common_signin_btn_text_light.xml",
+        "source": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\build\\intermediates\\exploded-aar\\play-services-base-7.8.0\\res\\color\\common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\build\\intermediates\\res\\merged\\world\\debug\\color\\common_signin_btn_text_dark.xml",
+        "source": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\build\\intermediates\\exploded-aar\\play-services-base-7.8.0\\res\\color\\common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\CMAdSdkDemo\\build\\intermediates\\res\\merged\\world\\debug\\color\\common_signin_btn_text_dark.xml",
+        "source": "C:\\code\\pegasi_github_en\\android_sdk\\pegasi_simple\\CMAdSdkDemo\\build\\intermediates\\exploded-aar\\play-services-base-7.8.0\\res\\color\\common_signin_btn_text_dark.xml"
+    }
+]
