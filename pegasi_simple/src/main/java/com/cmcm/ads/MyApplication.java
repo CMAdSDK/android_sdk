@@ -30,7 +30,12 @@ public class MyApplication extends Application {
        CMAdManagerFactory.setImageDownloadListener(new MyImageLoadListener());
 
         //if you want to print debug log ,set it
-      CMAdManager.enableLog();
+        CMAdManager.enableLog();
+
+        CMAdManager.getFactory().addLoaderClass("fb", "com.cmcm.adsdk.adapter.FacebookNativeAdapter");
+        CMAdManager.getFactory().addLoaderClass("ad", "com.cmcm.adsdk.adapter.AdmobNativeAdapter");
+        CMAdManager.getFactory().addLoaderClass("yh", "com.cmcm.adsdk.adapter.YahooNativeAdapter");
+        CMAdManager.getFactory().addLoaderClass("mp", "com.cmcm.adsdk.adapter.MopubNativeAdapter");
 
         //!!!!the code below only used for our demo,please do not integrate into you codes
 //        CMAdManager.enableTestCountry();
