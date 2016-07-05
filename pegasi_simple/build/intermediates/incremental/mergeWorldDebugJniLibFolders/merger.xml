@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\code\pegasi_github_en\android_sdk\pegasi_simple\src\main\jniLibs"/></dataSet><dataSet config="world"><source path="C:\code\pegasi_github_en\android_sdk\pegasi_simple\src\world\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\code\pegasi_github_en\android_sdk\pegasi_simple\src\debug\jniLibs"/></dataSet><dataSet config="worldDebug"><source path="C:\code\pegasi_github_en\android_sdk\pegasi_simple\src\worldDebug\jniLibs"/></dataSet></merger>
