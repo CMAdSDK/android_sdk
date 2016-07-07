@@ -20,7 +20,7 @@ import com.google.android.gms.ads.formats.NativeContentAdView;
 import java.util.Map;
 
 /**
- * Created by chenhao on 15/12/1.
+ * ### Note: For admob ads, pegasi sdk only supports the Advanced acount type of Admob for now, if publisher accessing Admob ads please to confirm your account type.
  */
 public class AdmobNativeAdapter extends NativeloaderAdapter {
     @Override

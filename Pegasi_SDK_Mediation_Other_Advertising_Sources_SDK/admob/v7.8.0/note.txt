@@ -1,0 +1,1 @@
+Note: For admob ads, pegasi sdk only supports the Advanced acount type of Admob for now, if publisher accessing Admob ads please to confirm your account type.
